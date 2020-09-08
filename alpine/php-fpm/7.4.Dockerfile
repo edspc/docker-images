@@ -10,10 +10,12 @@ RUN apk add --no-cache \
       icu-dev \
       libxml2-dev \
       libxslt-dev \
+      libzip-dev \
       libsodium-dev \
       g++ \
       make \
       autoconf \
+      oniguruma-dev \
       shadow && \
     docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install \
