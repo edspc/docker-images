@@ -15,8 +15,7 @@ RUN apk add --no-cache \
       make \
       autoconf \
       shadow && \
-    docker-php-ext-configure \
-      gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+    docker-php-ext-configure gd --with-freetype --with-jpeg && \
     docker-php-ext-install \
       dom \
       gd \
@@ -27,6 +26,7 @@ RUN apk add --no-cache \
       zip \
       soap \
       bcmath \
+      sockets \
       opcache && \
     pecl install xdebug libsodium && docker-php-ext-enable sodium && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \

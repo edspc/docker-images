@@ -11,6 +11,7 @@ RUN apk add --no-cache \
       libxml2-dev \
       libxslt-dev \
       libsodium-dev \
+      libzip-dev \
       g++ \
       make \
       autoconf \
@@ -27,6 +28,7 @@ RUN apk add --no-cache \
       zip \
       soap \
       bcmath \
+      sockets \
       opcache && \
     pecl install xdebug libsodium && docker-php-ext-enable sodium && \
     curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
