@@ -1,3 +1,3 @@
 FROM golang:alpine as build
 
-RUN apk add --no-chahe git && go get github.com/mailhog/mhsendmail
+RUN apk add --no-cache git && go get github.com/mailhog/mhsendmail
