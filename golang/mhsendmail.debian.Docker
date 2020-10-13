@@ -2,6 +2,6 @@ FROM golang:buster
 
 RUN apt-get update && \
     apt-get install git && \
-    go get github.com/mailhog/mhsendmai && \
+    go get github.com/mailhog/mhsendmail && \
     apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false && \
 		rm -rf /var/lib/apt/lists/*
